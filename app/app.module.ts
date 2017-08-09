@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './products/product.component';
 import { NavbarComponent } from './nav/nav.component';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { NavbarComponent } from './nav/nav.component';
                    AppRoutingModule
                    ],
   declarations: [ AppComponent,
-                          HomeComponent,
+                          ProductComponent,
                           NavbarComponent
                           ],
   providers: [ ],
