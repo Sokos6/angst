@@ -9,6 +9,10 @@ import { Product } from './product';
 
 export class ProductComponent implements OnInit {
 	products: Product[];
+	productForm: boolean = false;
+	isNewForm: boolean;
+	newProduct: any = {};
+
 
 	constructor(private _productService: ProductService) {}
 
@@ -18,6 +22,16 @@ export class ProductComponent implements OnInit {
 
 	getProducts() {
 		this.products = this._productService.getProductsFromData();
+	}
+
+	showEditProductForm(product: Product) {
+		if(!product) {
+			this.productForm = false;
+			return;
+		}
+		this.productForm = true;
+		this.isNewForm = false;
+		this.newProduct = product;
 	}
 
 }
