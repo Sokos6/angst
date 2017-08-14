@@ -67,6 +67,11 @@ export class ProductComponent implements OnInit {
 		this.editProductForm = false;
 	}
 
+	cancelNewProduct() {
+		this.newProduct = {};
+		this.productForm = false;
+	}
+
 }
 
 
