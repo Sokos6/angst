@@ -12,7 +12,19 @@ export class ProductService {
 		console.log(this.pItems);
 		return this.pItems;
 	}
-	// getProductsFromService(): Product[] {
+
+	addProduct(product: Product) {
+		this.pItems.push(product);
+		console.log(this.pItems);
+	}
+	
+
+}
+
+
+
+
+// getProductsFromService(): Product[] {
 	// 	return [{
 	// 		id: 1,
 	// 		name: 'Scissors',
@@ -30,5 +42,3 @@ export class ProductService {
 	// 		price: 5.99
 	// 	}]
 	// }
-
-}

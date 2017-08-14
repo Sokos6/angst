@@ -34,4 +34,21 @@ export class ProductComponent implements OnInit {
 		this.newProduct = product;
 	}
 
+	showAddProductForm() {
+		if(this.products.length) {
+			this.newProduct = {};
+		}
+		this.productForm = true;
+		this.isNewForm = true;
+	}
+
+	saveProduct(product: Product) {
+		if(this.isNewForm) {
+			this._productService.addProduct(product);
+		} else {
+
+		}
+		this.productForm = false;
+	}
+
 }
